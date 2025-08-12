@@ -7,6 +7,10 @@ import { API_SECRET } from '../config/index.js';
 
 const router = express.Router();
 
+router.get('/', (req, res) => {
+  return res.send('live')
+});
+
 router.post('/login', (req, res) => {
   const { username, password } = req.body;
   const user = users.find(u => u.username === username);

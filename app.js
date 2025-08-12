@@ -14,6 +14,8 @@ app.use(cors({ origin: '*' })); // Em produção, defina o domínio permitido
 app.use(express.json());
 app.use(morgan('dev'));
 
+app.use("/", authRoutes)
+
 // Rotas
 app.use('/auth', authRoutes);
 
